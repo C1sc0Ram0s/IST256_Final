@@ -1,0 +1,139 @@
+
+<style>
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+  }
+
+  .right-column {
+    width: 35%;
+    margin-top: 60px;
+  }
+
+  .product-description {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+  .product-description span {
+    font-size: 12px;
+    color: #358ED7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .product-description h1 {
+    font-weight: 300;
+    font-size: 35px;
+    color: #43484D;
+    letter-spacing: -2px;
+  }
+  .product-description p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939E;
+    line-height: 24px;
+  }
+
+  .product-price {
+    display: flex;
+    align-items: center;
+  }
+
+  .product-price span {
+    font-size: 26px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
+  }
+
+  .cart-btn {
+    display: inline-block;
+    background-color: royalblue;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+  }
+  .cart-btn:hover {
+    background-color: darkblue;
+  }
+
+</style>
+
+<main class="container">
+
+  <!-- Left Column / Product Image -->
+  <div class="container left-column">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/Apperal/FearofGodEssentialsSweatpants.avif" class="d-block w-100 h-auto" alt="...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Column -->
+  <div class="right-column">
+
+    <!-- Product Description -->
+    <div class="product-description">
+      <span>Apparel</span>
+      <h1>Fear of God Essentials Sweatpants</h1>
+      <p>Black/White</p>
+    </div>
+
+    <!-- Product Configuration -->
+    <div class="product-configuration">
+
+      <!-- Product Size -->
+      <div class="product-color">
+        <span>Size</span>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+          <option selected>Select Size</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </div> <br>
+
+      <!-- Product Quantity -->
+      <div class="product-quantity">
+        <span>Quantity</span>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+          <option selected>Select Quantity</option>
+          <option value="1" >1</option>
+          <option value="2" >2</option>
+          <option value="3" >3</option>
+          <option value="4" >4</option>
+          <option value="5" >5</option>
+          <option value="6" >6</option>
+          <option value="7" >7</option>
+          <option value="8" >8</option>
+        </select>
+
+      </div> <br>
+    </div>
+
+    <!-- Product Pricing -->
+    <div class="product-price">
+      <span><b>$180</b></span>
+      <a href="#" class="cart-btn">Add to cart</a>
+    </div>
+  </div>
+</main>
+
+

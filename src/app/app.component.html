@@ -3,7 +3,8 @@
 
 <style>
   #title{
-    font-size: 25px;
+    font-size: 35px;
+    color: white;
   }
   #tag{
     font-size: 12px;
@@ -19,9 +20,19 @@
   .modal-body{
     font-size: 14px;
   }
+  .nav-link{
+    color: white;
+  }
+  #shoppingCart{
+    color: white;
+  }
+  #userIcon{
+    color: white;
+  }
+
 </style>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: whitesmoke" id="nav">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0A2463" id="nav">
     <img src="assets/StreetSmartLogo.jpg" alt="StreetSmart Logo" height="120px" width="140px">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="/home" id="title"><b>StreetSmart</b><br><p id="tag" style="font-size: 14px">-Defy all odds</p></a>
@@ -42,14 +53,14 @@
 
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="userIcon">
-            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+            <i id="Uicon" class="fa fa-user fa-2x" aria-hidden="true"></i>
           </button>
           <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+                    <h5 class="modal-title" id="loginBtn">Log In</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <form>
@@ -57,7 +68,7 @@
                       <p>Lets check to see if you have an account</p>
                       <div class="form-group">
                         <label for="email" class="form-label">Email address</label>
-                        <input [ngModel]="email" type="email" class="form-control" id="email" placeholder="name@example.com">
+                        <input [(ngModel)]="email" [ngModelOptions]="{standalone:true}" type="email" class="form-control" id="email" placeholder="name@example.com">
                       </div>
                     </div>
                     <div class="modal-footer">

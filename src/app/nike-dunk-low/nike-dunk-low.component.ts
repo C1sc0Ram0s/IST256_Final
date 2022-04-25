@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ShoppingCartService} from "../shopping-cart.service";
 
 @Component({
   selector: 'app-nike-dunk-low',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NikeDunkLowComponent implements OnInit {
 
-  constructor() { }
+  cost = 288
+  size: string | any
+  quantity: number | any
+
+  constructor(private cart: ShoppingCartService) { }
 
   ngOnInit(): void {
+  }
+
+  sendToCart() {
+    let cart = {name: "Nike Dunk Low", cost: this.cost, size: this.size, quantity: this.quantity}
+    this.cart.addItem(cart)
   }
 
 }

@@ -115,32 +115,32 @@
       <!-- Product Size -->
       <div class="product-color">
         <span>Size</span>
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+        <select class="form-select form-select-sm" [(ngModel)]="size" aria-label=".form-select-sm example" required>
           <option selected>Select Size</option>
-          <option value="3">US M 5 | US W 6.5</option>
-          <option value="3">US M 6 | US W 7.5</option>
-          <option value="3">US M 7 | US W 8.5</option>
-          <option value="3">US M 8 | US W 9.5</option>
-          <option value="3">US M 9 | US W 10.5</option>
-          <option value="3">US M 10 | US W 11.5</option>
-          <option value="3">US M 11 | US W 12.5</option>
-          <option value="3">US M 12 | US W 13.5</option>
+          <option value="US M 5 | US W 6.5">US M 5 | US W 6.5</option>
+          <option value="US M 6 | US W 7.5">US M 6 | US W 7.5</option>
+          <option value="US M 7 | US W 8.5">US M 7 | US W 8.5</option>
+          <option value="US M 8 | US W 9.5">US M 8 | US W 9.5</option>
+          <option value="US M 9 | US W 10.5">US M 9 | US W 10.5</option>
+          <option value="US M 10 | US W 11.5">US M 10 | US W 11.5</option>
+          <option value="US M 11 | US W 12.5">US M 11 | US W 12.5</option>
+          <option value="US M 12 | US W 13.5">US M 12 | US W 13.5</option>
         </select>
       </div> <br>
 
       <!-- Product Quantity -->
       <div class="product-quantity">
         <span>Quantity</span>
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="quantity" required>
           <option selected>Select Quantity</option>
-          <option value="3">1</option>
-          <option value="3">2</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
           <option value="3">3</option>
-          <option value="3">4</option>
-          <option value="3">5</option>
-          <option value="3">6</option>
-          <option value="3">7</option>
-          <option value="3">8</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
         </select>
 
       </div> <br>
@@ -149,7 +149,7 @@
     <!-- Product Pricing -->
     <div class="product-price">
       <span><b>$270</b></span>
-      <a href="#" class="cart-btn">Add to cart</a>
+      <a routerLink="/shoppingCart" (click)="sendToCart()" class="cart-btn">Add to cart</a>
     </div>
   </div>
 </main>

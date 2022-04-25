@@ -120,7 +120,7 @@
       <!-- Product Size -->
       <div class="product-color">
         <span>Size</span>
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="size" required>
           <option selected>Select Size</option>
           <option value="XS">XS</option>
           <option value="S">S</option>
@@ -133,7 +133,7 @@
       <!-- Product Quantity -->
       <div class="product-quantity">
         <span>Quantity</span>
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="quantity" required>
           <option selected>Select Quantity</option>
           <option value="1" >1</option>
           <option value="2" >2</option>
@@ -151,7 +151,7 @@
     <!-- Product Pricing -->
     <div class="product-price">
       <span><b>$84</b></span>
-      <a href="#" class="cart-btn">Add to cart</a>
+      <a routerLink="/shoppingCart" (click)="sendToCart()" class="cart-btn">Add to cart</a>
     </div>
   </div>
 </main>

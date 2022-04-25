@@ -34,6 +34,7 @@ export const routes: Routes = [
 
   {path: 'shoes', component: ShoesComponent},
   {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'logIn', component: LogInComponent},
   {path: 'signUp', component: SignUpComponent},
   {path: 'clothing', component: ClothingComponent},

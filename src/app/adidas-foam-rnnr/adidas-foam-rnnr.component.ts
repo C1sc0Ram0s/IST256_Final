@@ -1,6 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output,} from '@angular/core';
 
+
 import {Router} from "@angular/router";
+import {ShoppingCartService} from "../shopping-cart.service";
 
 @Component({
   selector: 'app-adidas-foam-rnnr',
@@ -14,24 +16,17 @@ export class AdidasFoamRNNRComponent implements OnInit {
   shoePrice: number;
   size: string | any;
 
-  constructor(private router:Router) {
+  constructor(private router:Router, private cart:ShoppingCartService) {
     this.shoePrice = 300
   }
-
   ngOnInit(): void {
   }
 
 
 
-  /*sendToCart() {
-    this.shoppingCartComponent.products.push(
-      {
-        name: "Adidas Foam RNNR Vermillion",
-        price: 300,
-        size: this.size,
-        quantity: this.quantity,
-      })
-    this.router.navigateByUrl("/shoppingCart")
-  }*/
+  sendToCart() {
+    let cart = {name: "Adidas Yeezy Foam RNNR", cost: 300, size: this.size, quantity: this.quantity}
+    this.cart.addItem(cart)
+  }
 
 }

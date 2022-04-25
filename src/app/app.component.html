@@ -66,9 +66,17 @@
                   <form>
                     <div class="modal-body">
                       <p>Lets check to see if you have an account</p>
-                      <div class="form-group">
-                        <label for="email" class="form-label">Email address</label>
-                        <input [(ngModel)]="email" [ngModelOptions]="{standalone:true}" type="email" class="form-control" id="email" placeholder="name@example.com">
+                      <div class="mb-3">
+                        <label for="signUpEmail" class="form-label">Email:</label>
+                        <input [ngModel]="email" type="Email" class="form-control" id="signUpEmail" placeholder="Enter Email" name="signUpEmail" required>
+                        <div class="valid-feedback">Email is Valid.</div>
+                        <div class="invalid-feedback">Please Input Valid Email</div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="pwd" class="form-label">Password:</label>
+                        <input [ngModel]="password" type="Password" class="form-control" id="pwd" placeholder="Enter Password" name="pwd" required>
+                        <div class="valid-feedback">Valid Password.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
                       </div>
                     </div>
                     <div class="modal-footer">

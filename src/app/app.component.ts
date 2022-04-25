@@ -14,12 +14,13 @@ export class AppComponent {
   constructor(private logInComponent: LogInComponent, private router: Router){}
 
   email = ""
+  password = ""
 
   checkEmail() {
     // @ts-ignore
 
     for(let i in this.logInComponent.users){
-      if (this.email == this.logInComponent.users[i].username) {
+      if (this.email == this.logInComponent.users[i].username && this.password == this.logInComponent.users[i].password) {
         this.router.navigateByUrl('/logIn')
         // @ts-ignore
         document.getElementById('modalClose').click();

@@ -27,14 +27,15 @@ Points to callout here.  Delete if unused.
 
 **Passenger Notes:** I noticed that one of the product buttons was misplaced
 
-**Driver Notes:** User 1 provided the following feedback... Partner suggested I 
+**Driver Notes:** User 1 provided the following feedback... Partner suggested I check
+placement of the button in my HTML code
 
 **Takeaways:** I plan to change... I plan to implement the shopping cart service
-and user service 
+and fix the placement of the product buttons
 
 ## Usability Session 2
 
-**Passenger Notes:** I noticed
+**Passenger Notes:** I noticed the subheadings on some of the pages were touching the navbar
 
 **Driver Notes:** User 1 provided the following feedback... Partner suggested I use
 more padding and add more whitespace
